@@ -1,0 +1,99 @@
+html, body {
+  margin: 0;
+  background-color: #777777;
+}
+
+/* ___________________________LIST PROPERTIES */
+
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  font-family: arial, sans-serif;
+  width: 150px;
+  margin-left: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: inline-flex;
+}
+#main-nav ul > li > a:hover, nav-label:hover {
+  background-color: darkgrey;
+  transition: color 0.3s, background-color 0.3s;
+  color: white;
+}
+
+/*_____________________________NAV PROPERTIES */
+
+#nav-label {
+  background-color: grey;
+  color: black;
+  position: fixed;
+  top:100px;
+  width: 50px;
+  height: 50px;
+  align-content: center;
+  font-family: arial,sans-serif;
+  transition: top 0.5s;
+}
+#main-nav {
+  position: fixed;
+  background-color:lightgrey;
+  height: 50px;
+  width: 100%;
+  top: -100%;
+  transition: top 0.5s;
+
+}
+
+
+/* checkbox for nav-menu appearing when checked */
+
+#nav-checkbox {
+  display: none;
+}
+#nav-label::before {
+  position: fixed;
+  content:"Open";
+}
+#nav-checkbox:checked + label {
+  position: fixed;
+}
+#nav-checkbox:checked + label::before {
+  content:"Close";
+}
+#nav-checkbox::before ~ #main-nav {
+  top: 100%;
+}
+#nav-checkbox:checked ~ #main-nav {
+  top:0%;
+}
+
+
+
+/*________________________BANNER PROPERTIES__*/
+
+/* text overflow when box checked */
+
+ #nav-ckeckbox:checked ~ main {
+  height: 100%;
+  background-color: white;
+  opacity: 50%;
+  top: 150px;
+  transition: top 0.5s color 0.3s;
+  margin-top: 10;
+}
+
+p {
+  font-family: arial, sans-serif;
+  word-spacing: 2px;
+  text-align: justify;
+  padding-left: 100px;
+  padding-right: 100px;
+
+}
