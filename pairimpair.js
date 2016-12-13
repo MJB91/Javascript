@@ -8,8 +8,8 @@
 
 
 
-function cube (n ) {
-  if ( n%2==0) {
+function cube (n) {
+  if (n%2==0) {
     for ( var i = 0 ; i <= n * n * n ; i = i + 2 ) {
       console.log(i);
     }
@@ -21,3 +21,20 @@ function cube (n ) {
 }
 var n = process.argv[2];
 cube (n);
+
+/*--------------------------autre solution :
+
+function count2 (end) {
+  var j = 3;
+  if (end % 2 == 0) {
+  j = 2;
+  }
+  for (var i = 0; i <= end*end*end; i=i+j) {
+    console.log(i);
+  }
+}
+
+var n = process.argv[2];
+
+count3(n);
+-------------------------------------------*/

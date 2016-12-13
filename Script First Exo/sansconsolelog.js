@@ -2,14 +2,14 @@ var fin = process.argv[2];
 
 for(var i=0 ; i < fin; i++)
 {
-  if ((i%5==0)&&(i%7==0)){
-    fizzbuzz=true;
+  if  (i%5==0){
+    s+="fizz";
 }
-  else if (i%5==0){
-    fizz=true;
+  if (i%7==0){
+    s+="buzz";
 }
-  else if (i%7==0){
-    buzz=true;
+  if (s == "fizzbuzz"){
+    s+="";
 }
 console.log(i);
 }
